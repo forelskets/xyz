@@ -10,7 +10,7 @@ import {
 } from "react-share";
 
 const ApplyLoan = () => {
-  const shareUrl = 'www.forelskets.com bvhfytrytyrytrtyryryrrtrty';
+  const shareUrl = 'www.creditsin.com/form ';
   const [profile, setProfile] = useState({});
   const [lstatus, setLstatus] = useState(false);
   const LoanFunc = () => {
@@ -134,7 +134,12 @@ const ApplyLoan = () => {
                     </li>
 
                     <text style={{ backgroundColor: '#f0f3f4', padding: 8 }}>{profile.RefralNo}</text>
-                    <FacebookShareButton url={shareUrl} style={{ padding: 10 }} >
+
+                    <FacebookShareButton
+                      url={"www.creditsin.com"}
+                      quote={profile.RefralNo} style={{ padding: 10 }}
+
+                    >
                       <FacebookIcon size={40} />
                     </FacebookShareButton>
                     <EmailShareButton
@@ -148,7 +153,9 @@ const ApplyLoan = () => {
 
 
 
-                    <WhatsappShareButton url={shareUrl} style={{ padding: 10 }} >
+                    <WhatsappShareButton url={profile.RefralNo}
+                      subject="subject"
+                      body={"hey there, pls share my referal code"} style={{ padding: 10 }} >
                       <WhatsappIcon size={40} />
                     </WhatsappShareButton>
                     <br />

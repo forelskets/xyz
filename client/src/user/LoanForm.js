@@ -1255,6 +1255,7 @@ const LoanForm = () => {
                 </div>
               </div>
             </form>
+            <label>Note: if you don't have any info type NA or 0 </label>
           </div>
         </div>
       </div>
