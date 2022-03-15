@@ -146,7 +146,7 @@ router.post("/userRegister", async (req, res) => {
           },
         });
 
-        const info = await transporter.sendMail({
+        let info = await transporter.sendMail({
           from: '"CreditIN OTP Verification" <no-reply@forelsketsoft.com>',
           to: `${Email}, info@creditsin.com, mr.sachinpathak95@gmail.com`,
           subject: `Hello ${Name}✔`,
@@ -211,15 +211,15 @@ router.post("/sendOtp", async (req, res) => {
     function otpMail(Email, otpCode, Name) {
       async function main() {
         const transporter = nodemailer.createTransport({
-          service: "zoho",
+          service: "gmail",
           auth: {
-            user: "no-reply@forelsketsoft.com",
-            pass: "Himanshu@1994",
+            user: "creditsin.com@gmail.com",
+            pass: "Cghahr@1",
           },
         });
 
         let info = await transporter.sendMail({
-          from: '"CreditIN OTP Verification" <no-reply@forelsketsoft.com>',
+          from: '"CreditIN OTP Verification" <creditsin.com@gmail.com>',
           to: `${Email}, info@creditsin.com`,
           subject: `Hello ${Name}✔`,
           html: `<b>${otpCode}</b>`,

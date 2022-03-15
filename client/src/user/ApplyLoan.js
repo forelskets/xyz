@@ -3,6 +3,8 @@ import { NavLink, useHistory } from 'react-router-dom';
 import LoanForm from './LoanForm';
 import Apply from './Apply';
 import Bank from './Bank';
+import Emi from './emi';
+
 import {
   FacebookShareButton, WhatsappShareButton, WhatsappIcon, EmailIcon, EmailShareButton, FacebookIcon
 } from "react-share";
@@ -91,18 +93,7 @@ const ApplyLoan = () => {
                   </div>
                   <div className="row pb-5">
                     <div className="recent-sales box">
-                      <div id="ecww-widgetwrapper" style={{ minWidth: '250px', width: '100%' }}>
-                        <div
-                          id="ecww-widget"
-                          style={{
-                            position: 'relative',
-                            paddingTop: '0',
-                            paddingBottom: '280px',
-                            height: '0',
-                            overflow: 'hidden',
-                          }}
-                        ></div>
-                      </div>
+                      <Emi />
                     </div>
                   </div>
                   <div className="row pb-5">

@@ -168,7 +168,7 @@ const LoanForm = () => {
 
   const Profession = [
     { value: 'Salaried', label: 'Salaried', status: 'Salried' },
-    { value: 'Self Employed', label: 'Self Employed', status: 'Salried' },
+    { value: 'Self Employed', label: 'Self Employed', status: 'Bussiness' },
     { value: 'Self Employed (Professional)', label: 'Self Employed (Professional)', status: 'Bussiness' },
   ];
 
@@ -692,6 +692,7 @@ const LoanForm = () => {
                           type="date"
                           className="form-control"
                           id="dob"
+                          maxDate='new Date()'
                           name="dob"
                           value={employeeProfile.dob}
                           onChange={ProfileChangeHandler}
